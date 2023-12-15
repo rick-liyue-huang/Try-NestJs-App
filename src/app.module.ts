@@ -14,6 +14,7 @@ import { ConfigEnum } from './enum/config.enum';
 import { LoggerModule } from 'nestjs-pino';
 import { join } from 'path';
 import { LogModule } from './log/log.module';
+import { ormConfig } from '../ormconfig';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
 
@@ -36,6 +37,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
         DB_SYNC: Joi.boolean().default(false),
       }),
     }),
+    TypeOrmModule.forRoot(ormConfig),
     /*
     TypeOrmModule.forRoot({
       type: 'mysql',
@@ -48,6 +50,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
       logging: ['error'],
     }),
     */
+    /*
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -65,6 +68,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
           logging: process.env.NODE_ENV !== 'development', // true for development, false for production
         }) as TypeOrmModuleOptions,
     }),
+    */
     LogModule,
     // LoggerModule.forRoot({
     //   pinoHttp: {
