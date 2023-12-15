@@ -37,7 +37,7 @@ export class UserController {
 
   @Get()
   findAllUsers() {
-    const user = { isAdmin: false };
+    const user = { isAdmin: true };
     if (!user.isAdmin) {
       throw new HttpException('User is not admin, ', HttpStatus.FORBIDDEN);
     }

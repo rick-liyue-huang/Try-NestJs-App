@@ -3,16 +3,8 @@ import { UserModule } from './user/user.module';
 import { RangeModule } from './range/range.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import * as dotenv from 'dotenv';
-import Configuration from './configuration';
 import * as Joi from 'joi';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { User } from './entities/User';
-import { Role } from './entities/Role';
-import { Log } from './entities/Log';
-import { Profile } from './entities/Profile';
-import { ConfigEnum } from './enum/config.enum';
-import { LoggerModule } from 'nestjs-pino';
-import { join } from 'path';
 import { LogModule } from './log/log.module';
 import { ormConfig } from '../ormconfig';
 
