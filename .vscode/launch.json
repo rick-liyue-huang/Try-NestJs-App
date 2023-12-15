@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "name": "Launch via YARN",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "start:debug"],
+      "runtimeExecutable": "yarn",
+      "runtimeVersion": "20.9.0",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ]
+}

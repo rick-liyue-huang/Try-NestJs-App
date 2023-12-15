@@ -1,0 +1,8 @@
+db:
+  mysql1:
+    name: mysql-production1
+    port: 3306166
+
+  mysql2:
+    name: mysql-production2
+    port: 3306267

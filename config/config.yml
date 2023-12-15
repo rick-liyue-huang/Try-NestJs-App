@@ -1,0 +1,10 @@
+db:
+  mysql1:
+    host: localhost1
+    name: mysql
+    port: 33061
+
+  mysql2:
+    host: localhost2
+    name: mysql
+    port: 33062

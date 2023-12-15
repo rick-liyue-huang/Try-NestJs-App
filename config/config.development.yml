@@ -1,0 +1,8 @@
+db:
+  mysql1:
+    name: mysql-development1
+    port: 3306899
+
+  mysql2:
+    name: mysql-development2
+    port: 3306999
